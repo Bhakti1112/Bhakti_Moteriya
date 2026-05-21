@@ -650,6 +650,26 @@
             background: rgba(99, 120, 255, 0.1);
         }
 
+        .proj-link.has-label {
+            width: auto;
+            height: auto;
+            padding: 8px 10px;
+            gap: 4px;
+            flex-direction: column;
+        }
+
+        .proj-link-label {
+            font-size: .6rem;
+            letter-spacing: .6px;
+            text-transform: uppercase;
+            color: var(--muted);
+            transition: color .2s;
+        }
+
+        .proj-link.has-label:hover .proj-link-label {
+            color: var(--accent);
+        }
+
         .project-body {
             padding: 20px 28px 28px;
         }
@@ -1300,18 +1320,19 @@
                     <div class="skill-cat-title">Frontend</div>
                     <div class="skill-tags">
                         <span class="skill-tag">React.js</span>
-                        <span class="skill-tag">HTML5</span>
-                        <span class="skill-tag">CSS3</span>
-                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">HTML</span>
+                        <span class="skill-tag">CSS</span>
+                        
                     </div>
                 </div>
                 <div class="skill-category">
                     <div class="skill-cat-title">Backend</div>
                     <div class="skill-tags">
-                        <span class="skill-tag">Node.js</span>
-                        <span class="skill-tag">Express.js</span>
-                        <span class="skill-tag">.NET Core</span>
                         <span class="skill-tag">PHP</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">.NET Core</span>
+    
                         <span class="skill-tag">C#</span>
                     </div>
                 </div>
@@ -1327,9 +1348,8 @@
                     <div class="skill-cat-title">Tools & Practices</div>
                     <div class="skill-tags">
                         <span class="skill-tag">Git</span>
-                        <span class="skill-tag">GitHub</span>
                         <span class="skill-tag">JWT Auth</span>
-                        <span class="skill-tag">OTP Auth</span>
+                        <!-- <span class="skill-tag">OTP Auth</span> -->
                         <span class="skill-tag">REST APIs</span>
                         <span class="skill-tag">RBAC</span>
                     </div>
@@ -1337,7 +1357,7 @@
                 <div class="skill-category">
                     <div class="skill-cat-title">Soft Skills</div>
                     <div class="skill-tags">
-                        <span class="skill-tag">Problem Solving</span>
+                        <span class="skill-tag"> Positive Attitude</span>
                         <span class="skill-tag">Quick Adaptability</span>
                         <span class="skill-tag">Communication</span>
                         <span class="skill-tag">Teamwork</span>
@@ -1346,7 +1366,7 @@
                 <div class="skill-category">
                     <div class="skill-cat-title">Currently Learning</div>
                     <div class="skill-tags">
-                        <span class="skill-tag">TypeScript</span>
+                        <!-- <span class="skill-tag">TypeScript</span> -->
                         <span class="skill-tag">Cloud Computing</span>
                         <!-- <span class="skill-tag">System Design</span> -->
                         <span class="skill-tag">Gen AI / LLMs</span>
@@ -1371,6 +1391,64 @@
             <div class="projects-grid" id="projects-grid">
 
                 <!-- Project 1 -->
+                <div class="project-card" data-tags="dotnet sql">
+                    <div class="project-header">
+                        <div class="project-icon">🏊</div>
+                        <div class="project-links"></div>
+                    </div>
+                    <div class="project-body">
+                        <h3 class="project-title">BatchOps - Membership & Batch Management System for Service-based
+                            Organizations</h3>
+                        <p class="project-desc">April 2026. Architected and developed a full-stack web application for
+                            a live client (Swimming Pool Management System). Engineered a multi-tenant, role-based
+                            backend with secure JWT authentication and access control safeguarding user data.
+                            Implemented real-time batch and attendance management features, streamlining operations and
+                            improving resource utilization by 30%.</p>
+                        <div class="project-tech">
+                            <span class="tech-badge">ASP.NET Core</span>
+                            <span class="tech-badge">MSSQL</span>
+                            <span class="tech-badge">JavaScript</span>
+                            <span class="tech-badge">HTML</span>
+                            <span class="tech-badge">CSS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card" data-tags="python ai">
+                    <div class="project-header">
+                        <div class="project-icon">🧭</div>
+                        <div class="project-links">
+                            <a href="https://chronosai-tdlr.onrender.com" target="_blank" class="proj-link has-label"
+                                title="Live Demo">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M14 3h7v7" />
+                                    <path d="M10 14L21 3" />
+                                    <path d="M21 14v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6" />
+                                </svg>
+                                <span class="proj-link-label">Live Demo</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <h3 class="project-title">Chronos-AI — AI Powered Travel Planner</h3>
+                        <p class="project-desc">February 2026. Built and deployed an AI-powered travel planner with
+                            personalized itinerary generation, weather-aware scheduling, and budget-based
+                            recommendations using Python, Streamlit, and Gemini APIs. Implemented async AI workflows,
+                            caching, retry mechanisms, geolocation integration, and explainable decision pipelines for
+                            reliable real-time trip planning.</p>
+                        <div class="project-tech">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">Streamlit</span>
+                            <span class="tech-badge">PydanticAI</span>
+                            <span class="tech-badge">Gemini 2.5 Flash API</span>
+                            <span class="tech-badge">Weather APIs</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
                 <div class="project-card" data-tags="react node mysql">
                     <div class="project-header">
                         <div class="project-icon">🛍️</div>
@@ -1403,7 +1481,7 @@
                     </div>
                 </div>
 
-                <!-- Project 2 -->
+                <!-- Project 4 -->
                 <div class="project-card" data-tags="dotnet sql">
                     <div class="project-header">
                         <div class="project-icon">🎓</div>
@@ -1435,7 +1513,7 @@
                     </div>
                 </div>
 
-                <!-- Project 3 -->
+                <!-- Project 5 -->
                 <div class="project-card" data-tags="php mysql">
                     <div class="project-header">
                         <div class="project-icon">🔬</div>
